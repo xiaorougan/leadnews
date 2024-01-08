@@ -22,13 +22,12 @@ public class ExceptionCatch {
     public ResponseResult exception(Exception e){
         e.printStackTrace();
         log.error("catch exception:{}",e.getMessage());
-
         return ResponseResult.errorResult(AppHttpCodeEnum.SERVER_ERROR);
     }
 
     /**
      * 处理可控异常  自定义异常
-     * @param e
+     * @param
      * @return
      */
     @ExceptionHandler(CustomException.class)
