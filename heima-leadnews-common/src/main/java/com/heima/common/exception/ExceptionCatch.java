@@ -27,7 +27,7 @@ public class ExceptionCatch {
 
     /**
      * 处理可控异常  自定义异常
-     * @param e
+     * @param
      * @return
      */
     @ExceptionHandler(CustomException.class)

@@ -24,7 +24,7 @@
             <td>${stu_index+1}</td>
             <td>${stu.name}</td>
             <td>${stu.age}</td>
-            <td>${stu.money}</td>
+<#--            <td>${stu.money}</td>-->
         </tr>
 
         <#else >
@@ -70,6 +70,7 @@
             <td>${stuMap[key].name}</td>
             <td>${stuMap[key].age}</td>
             <td>${stuMap[key].money}</td>
+            <td>${key}</td>
         </tr>
             <#else>
                 <tr>

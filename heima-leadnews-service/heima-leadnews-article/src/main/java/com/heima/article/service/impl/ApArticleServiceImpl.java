@@ -31,6 +31,7 @@ public class ApArticleServiceImpl extends ServiceImpl<ApArticleMapper, ApArticle
      * @param type  1 加载更多  2 加载最新
      * @return
      */
+    @Override
     public ResponseResult load(ArticleHomeDto dto,Short type){
         //1.校验参数
         //分页条数校验
@@ -41,7 +42,7 @@ public class ApArticleServiceImpl extends ServiceImpl<ApArticleMapper, ApArticle
         dto.setSize(Math.min(size,MAX_PAGE_SIZE));
         //校验参数 -->type
         if (!type.equals(ArticleConstants.LOADTYPE_LOAD_MORE) && !type.equals(ArticleConstants.LOADTYPE_LOAD_NEW))
-            type = 1;
+            type = ArticleConstants.LOADTYPE_LOAD_MORE;
 
         //频道参数校验
         if (StringUtil.isBlank(dto.getTag()))
