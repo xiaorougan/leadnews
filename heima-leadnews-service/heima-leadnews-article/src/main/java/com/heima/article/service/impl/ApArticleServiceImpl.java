@@ -13,8 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Service
 @Transactional
@@ -35,6 +34,7 @@ public class ApArticleServiceImpl extends ServiceImpl<ApArticleMapper, ApArticle
         //1.校验参数
         //分页条数校验
         Integer size  = dto.getSize();
+        String s = "1111";
         if(size==null||size==0)
             size = 10;
         //分页值不超过50
@@ -47,6 +47,9 @@ public class ApArticleServiceImpl extends ServiceImpl<ApArticleMapper, ApArticle
         if (StringUtil.isBlank(dto.getTag()))
             dto.setTag(ArticleConstants.DEFAULT_TAG);
 
+//        List<Integer> a = new ArrayList<>();
+//        a.pop
+        Deque<Integer> q = new LinkedList<>();
 
         //时间校验
         if (dto.getMaxBehotTime()==null)dto.setMaxBehotTime(new Date());
