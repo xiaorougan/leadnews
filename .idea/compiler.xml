@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="freemarker-demo" />
+        <module name="minio-demo" />
         <module name="untitled" />
         <module name="heima-leadnews-utils" />
         <module name="heima-leadnews-feign-api" />
@@ -38,6 +39,7 @@
       <module name="heima-leadnews-test" options="-parameters" />
       <module name="heima-leadnews-user" options="-parameters" />
       <module name="heima-leadnews-utils" options="-parameters" />
+      <module name="minio-demo" options="-parameters" />
       <module name="untitled" options="-parameters" />
     </option>
   </component>
